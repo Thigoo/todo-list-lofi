@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-image: url(./img/lofi.webp);
+    --bg-main: #7d7d7dcc;
+    --font-color: #E3DFFD;
+    --task-done: #E3DFFD;
+    --btn-hover: #cdc6fb;
+    --bd-radius: 20px;
+    --font: "Segoe UI";
+}
+
+
+.alt-theme {
+    --bg-image: url(./img/lofi-pixel.jpg);
+    --bg-main: #164B60cc;
+    --font-color: #5adff1;
+    --task-done: #848e9b;
+    --btn-hover: #71eeff;
+    --bd-radius: 7px;
+    --font: "Courier New";
+}
+
+body {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: var(--font);
+
+    min-height: 100vh;
+    position: relative;
+    transition: .2s ease;
+}
+
+main {
+    max-width: 500px;
+    margin: 2rem auto;
+    background-color: var(--bg-main);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+header {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--font-color);
+    position: relative;
+}
+
+.switcher {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--font-color);
+    background-color: #1d1d1d;
+    border-radius: .2rem;
+    padding: .2rem;
+    transition: .2s ease;
+}
+
+.switcher:hover {
+    transform: scale(1.1);
+}
+
+header p {
+    margin-top: 1rem;
+    font-size: .6rem;
+}
+
+.date {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    margin-top: .7rem;
+    margin-bottom: -.5rem;
+    font-size: 1rem;
+    padding: .4rem 1rem;
+    border-radius: var(--bd-radius);
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+form .form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+.form-control div {
+    margin-top: .2rem;
+}
+
+.form-control .msg {
+    color: red;
+    background-color: #fff;
+    border-radius: var(--bd-radius);
+    padding: 0 .5rem;
+    font-weight: 700;
+    font-size: .4rem;
+    visibility: hidden;
+}
+
+::placeholder {
+    font-family: var(--font);
+}
+
+form button {
+    padding: .4rem;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--font-color);
+    transition: .2s ease;
+}
+
+form button:hover {
+    transform: scale(1.1);
+    color: var(--btn-hover);
+}
+
+.todo-list {
+    margin-top: 2rem;
+}
+
+.todo {
+    background-color: #fafafa;
+    color: #111;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    border-radius: var(--bd-radius);
+}
+
+.todo li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo p {
+    flex: 2;
+    margin-left: 1rem;
+}
+
+button {
+    transition: .2s ease;
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.check-btn {
+    color: #A0C49D;
+}
+
+.check-btn:hover {
+    color: #5eb05e;
+}
+
+.delete-btn {
+    color: #413F42;
+}
+
+.delete-btn:hover {
+    color: #FF6464;
+}
+
+.done {
+    background-color: var(--task-done);
+    text-decoration: line-through;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--bg-main);
+    width: 100%;
+}
